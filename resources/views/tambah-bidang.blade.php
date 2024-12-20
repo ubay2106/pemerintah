@@ -8,7 +8,7 @@
         <div class="card-body">
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Nama Bidang</label>
-                <input type="text" class="form-control" name="nama_bidang" id="formGroupExampleInput" placeholder="Input">
+                <input type="text" class="form-control" name="nama_bidang" id="formGroupExampleInput" placeholder="Input" required>
             </div>
             <div class="card-footer">
                 <button class="btn btn-primary" type="submit">Simpan</button>

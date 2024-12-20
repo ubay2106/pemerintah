@@ -17,14 +17,25 @@ class AuthController extends Controller
 
     public function action_login(Request $request)
     {
-        $cek = $request->validate([
+        $request->validate([
             'email_admin' => 'required|email:dns',
             'password' => 'required',
+        ],[
+            'email_admin.required'=>'Silahkan Isi Email',
+            'email_admin.email_admin'=>'Email Salah',
+            'password.required'=>'Silahkan Isi Password',
         ]);
+
+        $cek = [
+            'email_admin' => $request->email_admin,
+            'password' => $request->password
+        ];
 
         if (Auth::attempt($cek)) {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
+        }else {
+            return redirect('login')->withErrors('Email atau Password salah')->withInput();
         }
     }
 

@@ -9,12 +9,12 @@
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Nama Pemerintah</label>
                 <input type="text" class="form-control" name="nama" id="formGroupExampleInput"
-                    value="{{ $detail->nama }}" placeholder="Input">
+                    value="{{ $detail->nama }}" placeholder="Input" required>
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Email</label>
                 <input type="text" class="form-control" name="email" id="formGroupExampleInput"
-                    value="{{ $detail->email }}" placeholder="Input">
+                    value="{{ $detail->email }}" placeholder="Input" required>
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Jenis Kelamin</label>
