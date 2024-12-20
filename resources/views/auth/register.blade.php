@@ -35,7 +35,7 @@
         <div class="card">
             <div class="card-body register-card-body">
                 <p class="login-box-msg">Register Admin</p>
-                <form id="registerForm">
+                <form id="registerForm" action="/register" method="POST">
                     @csrf
                     <div class="input-group mb-3">
                         <input id="username" type="text" class="form-control" name="username" required
@@ -86,41 +86,7 @@
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/adminlte.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#registerForm').on('submit', function(e) {
-                e.preventDefault();
-                $.ajax({
-                    url: '',
-                    method: 'POST',
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        Swal.fire({
-                            title: 'Success!',
-                            text: response.message,
-                            icon: 'success',
-                            confirmButtonText: 'OK'
-                        });
-                        $('#registerForm')[0].reset();
-                    },
-                    error: function(response) {
-                        var errors = response.responseJSON.errors;
-                        $.each(errors, function(key, value) {
-                            $('#' + key).addClass('is-invalid');
-                            $('#' + key).after(
-                                '<span class="invalid-feedback" role="alert"><strong>' +
-                                value[0] + '</strong></span>');
-                        });
-                    }
-                });
-            });
-        });
 
-        // JavaScript validation to allow only numbers in the phone_number field
-        $(document).on('input', 'input[name="phone_number"]', function() {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    </script>
 </body>
 
 </html>

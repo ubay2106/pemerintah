@@ -33,19 +33,19 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    public function action_daftar(Request $request)
+    public function action_register(Request $request)
     {
         $request->validate([
             'username' => 'required|string',
             'fullname' => 'required|string',
-            'email' => 'required|email',
+            'email_admin' => 'required|email',
             'password' => 'required|string'
         ]);
 
         $request['password'] = Hash::make($request['password']);
 
         user::create($request->all());
-        return view('/login');
+        return view('auth.login');
     }
 
     public function logout(Request $request)
