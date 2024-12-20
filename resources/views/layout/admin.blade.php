@@ -22,7 +22,8 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
     <!-- iCheck -->
     <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- JQVMap -->
@@ -79,7 +80,8 @@
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="{{ asset('assets/Sumenep.png') }}" alt="Logo" height="400" width="400">
+            <img class="animation__shake" src="{{ asset('assets/Sumenep.png') }}" alt="Logo" height="400"
+                width="400">
         </div>
 
         <!-- Navbar -->
@@ -96,16 +98,16 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">
-                        {{auth()->user()->username}}
+                        {{ auth()->user()->username }}
                     </a>
                     <form action="logout" method="POST">
                         @csrf
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <button class="dropdown-item">
-                            logout
-                    </button>
-                    </div>
-                </form>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <button class="dropdown-item">
+                                logout
+                            </button>
+                        </div>
+                    </form>
                 </li>
             </ul>
         </nav>
@@ -126,7 +128,7 @@
                         <i class="fa fa-user text-white ml-2"></i>
                     </div>
                     <div class="info">
-                        <p class="d-block my-auto text-white ml-1">{{auth()->user()->username}}</p>
+                        <p class="d-block my-auto text-white ml-1">{{ auth()->user()->username }}</p>
                     </div>
                 </div>
 

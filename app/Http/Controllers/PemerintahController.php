@@ -38,13 +38,14 @@ class PemerintahController extends Controller
         return redirect('/pemerintah')->with('success', 'Pemerintah berhasil ditambahkan');
     }
 
-    public function edit_pemerintah($id){
+    public function edit_pemerintah($id)
+    {
         $jabatan = JabatanModel::all();
         $bidang = BidangModel::all();
-        
+
         $detail = PemerintahModel::findOrFail($id);
-    
-        return view('edit-pemerintah',  compact('detail','jabatan','bidang'));
+
+        return view('edit-pemerintah', compact('detail', 'jabatan', 'bidang'));
     }
     public function action_edit_pemerintah(Request $request, $id)
     {
@@ -66,6 +67,6 @@ class PemerintahController extends Controller
         $pemerintah = PemerintahModel::findOrFail($id);
         $pemerintah->delete();
 
-        return back()->with('success','Pemerintah berhasil dihapus');
+        return back()->with('success', 'Pemerintah berhasil dihapus');
     }
 }

@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
-
 class AuthController extends Controller
 {
-    public function login(){
+    public function login()
+    {
         return view('auth.login');
     }
 
@@ -25,11 +25,11 @@ class AuthController extends Controller
         if (Auth::attempt($cek)) {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
-
         }
     }
 
-    public function register(){
+    public function register()
+    {
         return view('auth.register');
     }
 
@@ -39,7 +39,7 @@ class AuthController extends Controller
             'username' => 'required|string',
             'fullname' => 'required|string',
             'email_admin' => 'required|email',
-            'password' => 'required|string'
+            'password' => 'required|string',
         ]);
 
         $request['password'] = Hash::make($request['password']);
@@ -55,6 +55,4 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
-
-
 }

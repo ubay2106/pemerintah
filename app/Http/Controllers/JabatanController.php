@@ -8,15 +8,17 @@ use Illuminate\Http\Request;
 
 class JabatanController extends Controller
 {
-    public function index(){
-        $data =[
-            'jabatan' =>JabatanModel::all()
+    public function index()
+    {
+        $data = [
+            'jabatan' => JabatanModel::all(),
         ];
-        return view("jabatan",$data);
+        return view('jabatan', $data);
     }
 
-    public function tambah_jabatan(){
-        return view("tambah-jabatan");
+    public function tambah_jabatan()
+    {
+        return view('tambah-jabatan');
     }
 
     public function action_tambah_jabatan(Request $request)
@@ -29,11 +31,12 @@ class JabatanController extends Controller
         return redirect('/jabatan')->with('success', 'jabatan berhasil ditambahkan');
     }
 
-    public function edit_jabatan($id){
+    public function edit_jabatan($id)
+    {
         $data = [
             'detail' => JabatanModel::findOrFail($id),
         ];
-    
+
         return view('edit-jabatan', $data);
     }
 
@@ -53,6 +56,6 @@ class JabatanController extends Controller
         $jabatan = JabatanModel::findOrFail($id);
         $jabatan->delete();
 
-        return back()->with('success','jabatan berhasil dihapus');
+        return back()->with('success', 'jabatan berhasil dihapus');
     }
 }

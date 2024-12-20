@@ -18,8 +18,8 @@
                 <label for="formGroupExampleInput" class="form-label">Jenis Kelamin</label>
                 <select name="jk" id="jk" class="form-control" required>
                     <option value="" disabled selected>Pilih Jenis Kelamin</option>
-                        <option>laki-laki</option>
-                        <option>perempuan</option>
+                    <option>laki-laki</option>
+                    <option>perempuan</option>
                 </select>
             </div>
             <div class="mb-3">

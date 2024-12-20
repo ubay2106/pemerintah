@@ -7,15 +7,17 @@ use Illuminate\Http\Request;
 
 class BidangController extends Controller
 {
-    public function index(){
-        $data =[
-            'bidang' =>BidangModel::all()
+    public function index()
+    {
+        $data = [
+            'bidang' => BidangModel::all(),
         ];
-        return view("bidang", $data);
+        return view('bidang', $data);
     }
 
-    public function tambah_bidang(){
-        return view("tambah-bidang");
+    public function tambah_bidang()
+    {
+        return view('tambah-bidang');
     }
 
     public function action_tambah_bidang(Request $request)
@@ -28,11 +30,12 @@ class BidangController extends Controller
         return redirect('/bidang')->with('success', 'Bidang berhasil ditambahkan');
     }
 
-    public function edit_bidang($id){
+    public function edit_bidang($id)
+    {
         $data = [
             'detail' => BidangModel::findOrFail($id),
         ];
-    
+
         return view('edit-bidang', $data);
     }
 
@@ -52,6 +55,6 @@ class BidangController extends Controller
         $bidang = BidangModel::findOrFail($id);
         $bidang->delete();
 
-        return back()->with('success','bidang berhasil dihapus');
+        return back()->with('success', 'bidang berhasil dihapus');
     }
 }

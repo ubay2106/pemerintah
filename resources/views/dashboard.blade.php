@@ -81,7 +81,7 @@
             <div class="col-lg-6 col-md-6 mt-4 mb-4">
                 <div class="card">
                     <div class="card-body">
-                        
+
                         <h6 class="mb-0 ">SUMENEP KOTA KERIS</h6>
                         <p class="text-sm ">visit now</p>
                         <div class="pe-2">
@@ -110,7 +110,8 @@
                         <hr class="dark horizontal">
                         <div class="d-flex justify-content-between align-items-center">
                             <p class="mb-0 text-sm text-success font-weight-bolder"> The Soul Of Madura </p>
-                            <img class="brand-image" src="assets/Sumenep.png" alt="Logo" height="70" width="70">
+                            <img class="brand-image" src="assets/Sumenep.png" alt="Logo" height="70"
+                                width="70">
                         </div>
                     </div>
                 </div>

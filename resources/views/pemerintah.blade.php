@@ -41,30 +41,34 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($pemerintah as $item)
-                                    <tr>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $loop->iteration }}</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $item->nama }}</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $item->email }}</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $item->jk }}</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $item->jabatan->nama_jabatan }}</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $item->bidang->nama_bidang }}</p>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <a href="/pemerintah/{{ $item->id }}/edit-pemerintah" class="btn btn-outline-primary btn-sm mb-0">Edit</a>
-                                            <a href="/pemerintah/{{ $item->id }}/hapus_pemerintah" class="btn btn-outline-primary btn-sm mb-0">Delete</a>
-                                        </td>
-                                    </tr> 
+                                        <tr>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $loop->iteration }}</p>
+                                            </td>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $item->nama }}</p>
+                                            </td>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $item->email }}</p>
+                                            </td>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $item->jk }}</p>
+                                            </td>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $item->jabatan->nama_jabatan }}
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $item->bidang->nama_bidang }}
+                                                </p>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <a href="/pemerintah/{{ $item->id }}/edit-pemerintah"
+                                                    class="btn btn-outline-primary btn-sm mb-0">Edit</a>
+                                                <a href="/pemerintah/{{ $item->id }}/hapus_pemerintah"
+                                                    class="btn btn-outline-primary btn-sm mb-0">Delete</a>
+                                            </td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>

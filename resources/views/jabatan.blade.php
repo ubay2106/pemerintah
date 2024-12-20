@@ -20,7 +20,8 @@
                                         <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                             No</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jabatan
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Jabatan
                                         </th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -28,22 +29,24 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($jabatan as $item)
-                                    <tr>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $loop->iteration }}</p>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">{{ $item->nama_jabatan }}</h6>
+                                        <tr>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $loop->iteration }}</p>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm">{{ $item->nama_jabatan }}</h6>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <a href="/jabatan/{{ $item->id }}/edit-jabatan" class="btn btn-outline-primary btn-sm mb-0">Edit</a>
-                                            <a href="/jabatan/{{ $item->id }}/hapus_jabatan" class="btn btn-outline-primary btn-sm mb-0">Delete</a>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <a href="/jabatan/{{ $item->id }}/edit-jabatan"
+                                                    class="btn btn-outline-primary btn-sm mb-0">Edit</a>
+                                                <a href="/jabatan/{{ $item->id }}/hapus_jabatan"
+                                                    class="btn btn-outline-primary btn-sm mb-0">Delete</a>
+                                            </td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>

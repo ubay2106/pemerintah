@@ -8,11 +8,13 @@
         <div class="card-body">
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Nama Pemerintah</label>
-                <input type="text" class="form-control" name="nama" id="formGroupExampleInput" value="{{ $detail->nama }}" placeholder="Input">
+                <input type="text" class="form-control" name="nama" id="formGroupExampleInput"
+                    value="{{ $detail->nama }}" placeholder="Input">
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Email</label>
-                <input type="text" class="form-control" name="email" id="formGroupExampleInput" value="{{ $detail->email }}" placeholder="Input">
+                <input type="text" class="form-control" name="email" id="formGroupExampleInput"
+                    value="{{ $detail->email }}" placeholder="Input">
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">Jenis Kelamin</label>

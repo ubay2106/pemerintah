@@ -14,7 +14,8 @@ class DashboardController extends Controller
     //     return view("dashboard");
     // }
 
-    public function index(){
+    public function index()
+    {
         $date = Carbon::now();
         $bidang = BidangModel::withCount('pemerintah')->get();
         $jabatan = JabatanModel::withCount('pemerintah')->get();
@@ -22,6 +23,6 @@ class DashboardController extends Controller
         $p = PemerintahModel::where('jk', 'perempuan')->count();
         $pemerintah = PemerintahModel::all();
 
-        return view('dashboard', compact('bidang','jabatan', 'pemerintah', 'date', 'l','p'));
+        return view('dashboard', compact('bidang', 'jabatan', 'pemerintah', 'date', 'l', 'p'));
     }
 }
