@@ -39,12 +39,12 @@
       <a href="" class="h2"><b>Pemerintah</b><br>Kabupaten Sumenep</a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Silahkan login terlebih dahulu</p>
+      <p class="login-box-msg">Login Admin</p>
 
       <form action="" method="POST">
         @csrf
         <div class="input-group mb-3">
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukkan email">
+            <input id="email_admin" type="email_admin" class="form-control @error('email') is-invalid @enderror" name="email_admin" value="{{ old('email_admin') }}" required autocomplete="email" autofocus placeholder="Masukkan email">
 
             @error('email')
                 <span class="invalid-feedback" role="alert">

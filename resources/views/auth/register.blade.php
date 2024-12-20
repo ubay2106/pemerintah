@@ -34,12 +34,12 @@
         </div>
         <div class="card">
             <div class="card-body register-card-body">
-                <p class="login-box-msg">Pendaftaran anggota baru</p>
+                <p class="login-box-msg">Register Admin</p>
                 <form id="registerForm">
                     @csrf
                     <div class="input-group mb-3">
-                        <input id="name" type="text" class="form-control" name="name" required
-                            autocomplete="name" autofocus placeholder="Masukkan username">
+                        <input id="username" type="text" class="form-control" name="username" required
+                            autocomplete="username" autofocus placeholder="Masukkan username">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -47,8 +47,8 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input id="full_name" type="text" class="form-control" name="full_name" required
-                            autocomplete="full_name" placeholder="Masukkan nama lengkap">
+                        <input id="fullname" type="text" class="form-control" name="fullname" required
+                            autocomplete="fullname" placeholder="Masukkan nama lengkap">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -56,8 +56,8 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input id="email" type="email" class="form-control" name="email" required
-                            autocomplete="email" placeholder="Masukkan email">
+                        <input id="email_admin" type="email" class="form-control" name="email_admin" required
+                            autocomplete="email_admin" placeholder="Masukkan email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -70,24 +70,6 @@
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
-                            required autocomplete="new-password" placeholder="Masukkan konfirmasi password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input id="phone_number" type="text" class="form-control" name="phone_number" required
-                            autocomplete="phone_number" placeholder="Masukkan nomor handphone">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-phone"></span>
                             </div>
                         </div>
                     </div>

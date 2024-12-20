@@ -96,16 +96,16 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">
-                        Nama Pengguna
+                        {{auth()->user()->username}}
                     </a>
-
+                    <form action="logout" method="POST">
+                        @csrf
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href=""
-                            onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
+                        <button class="dropdown-item">
                             logout
-                        </a>
+                    </button>
                     </div>
+                </form>
                 </li>
             </ul>
         </nav>
@@ -126,7 +126,7 @@
                         <i class="fa fa-user text-white ml-2"></i>
                     </div>
                     <div class="info">
-                        <p class="d-block my-auto text-white ml-1">User</p>
+                        <p class="d-block my-auto text-white ml-1">{{auth()->user()->username}}</p>
                     </div>
                 </div>
 
